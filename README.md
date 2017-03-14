@@ -1,5 +1,5 @@
-#データベース設計
-##messagestable
+# データベース設計
+## messagestable
 イメージ
 
 |    body    |     image   |    user_id   |   group_id     |
@@ -15,7 +15,7 @@
 
 
 
-##userstable
+## userstable
  新たに追加カラム
 
 | group_id | nickname |  |
@@ -30,8 +30,8 @@
 
 
 
-##groupstable
-###カラム
+## groupstable
+### カラム
 
 | group_name |  |  |
 |:-----------|------------:|:------------:|
