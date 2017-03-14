@@ -1,31 +1,29 @@
-# データベース設計
+#データベース設計
 ## messagestable
 イメージ
 
-|    body    |     image   |    user_id   |   group_id     |
-|:-----------|:------------|:------------ |:--------|
-|            |             |              |         |
-|     |       |        |         |
-|       |         |          |         |
-|         |           |           |         |
-|       |        |      |         |
-|    |      |      |         |
-
+|    body    |     image   |    user_id   |   group_id |
+|:-----------|:------------|:------------ |:--------   |
+|            |             |              |            |
+|          　|        　　　|         　　　|　　　　　    |
+|       　　　|         　　|          　　 |            |
+|         　　|           　|           　　|　          |
+|       　　　|        　　　|      　　　　　|         　 |
+|    　　　　　|      　　　　|      　　　　　|            |
 
 
 
 
 ## userstable
  新たに追加カラム
-
-| group_id | nickname |  |
-|:-----------|------------:|:------------:|
-| This       |        This |     This     |
-| column     |      column |    column    |
-| will       |        will |     will     |
-| be         |          be |      be      |
-| left       |       right |    center    |
-| aligned    |     aligned |   aligned    |
+ 
+| group_id | nickname      |              
+|:-----------|------------:|
+|        　　 |             |              
+|            |             |              
+|            |             |              
+|            |             |              
+|            |             |              
 
 
 
@@ -33,12 +31,19 @@
 ## groupstable
 ### カラム
 
-| group_name |  |  |
-|:-----------|------------:|:------------:|
-| This       |        This |     This     |
-| column     |      column |    column    |
-| will       |        will |     will     |
-| be         |          be |      be      |
-| left       |       right |    center    |
-| aligned    |     aligned |   aligned    |
+| group_name |             
+|:-----------|
+|            |       
+|            |      
+|            |      
+|            |         
+|            |      
+|            |   
+
+
+##messages_userstable
+
+| messages_id | users_id |
+|:------------|:---------|
+|             |          |
 
