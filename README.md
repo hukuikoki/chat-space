@@ -1,51 +1,42 @@
 # データベース設計
 ## messagestable
-イメージ
 
-|    body    |     image   |    user_id   |   group_id |
-|:-----------|:------------|:------------ |:--------   |
+| colum  | type  |
+|:------ |:------|
+| body   | text  |
+|image   |string |
+|user_id |integer|
+|group_id|integer|
 
-### 型
-body text image string user_id integer group_id integer
 
 
 ## userstable
- 新たに追加カラム
- 
-| group_id | nickname      |              
-|:-----------|------------:|
 
 
+| colum  | type  |
+|:------ |:------|
+| name   | string|
 
-### 型
-group_id integer nickname string            
+
+         
 
 
 
 
 ## groupstable
-### カラム
 
-| group_name |
-|:-----------|
-|            |
-|            |      
-|            |      
-|            |         
-|            |      
-|            |
+| colum  | type  |
+|:------ |:------|
+| key    | string|
+|dedtail |text   |
 
-### 型
-group_name string
+    
 
 
-## messages_userstable
+## user_groupstable
 
-| messages_id | users_id |
-|:------------|:---------|
-|             |          |
-
-### 型
-messages_id integer
-users_id integer
+| colum  | type  |
+|:------ |:------|
+| user_id|integer|
+|group_id|integer|
 
