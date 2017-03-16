@@ -1,26 +1,26 @@
 # データベース設計
 ## messages
-| colum  | type     |
+|colum   |type      |
 |:------ |:---------|
-| text   | text     |
+|text    |text      |
 |image   |string    |
 |user_id |references|
 |group_id|references|
 
 ## users
-| colum  | type  |
+|colum   |type   |
 |:------ |:------|
-| name   | string|
+|name    |string |
 
 ## groups
-| colum  | type  |
-|:------ |:------|
-| name   | string|
+|colum   |type    |
+|:------ |:-------|
+|name    |string  |
 
 ## user_groupstable
 
-| colum  | type     |
+|colum   |type      |
 |:------ |:---------|
-| user_id|references|
+|user_id |references|
 |group_id|references|
 
