@@ -16,7 +16,7 @@ belongs_to :group
 |name    |string |
 ### アソシエーション
 has_many :user_groups
-has_many :belonged_groups, through: :user_groups, source: :group
+has_many :groups, through: :user_groups
 
 ## groups
 |colum   |type    |
@@ -24,7 +24,8 @@ has_many :belonged_groups, through: :user_groups, source: :group
 |name    |string  |
 ###アソシエーション
 has_many :messages
-has_many :belonged_users, through: :user_groups, source: :user
+has_many :user_groups
+has_many :users, through: :user_groups
 
 ## user_groups
 |colum   |type      |
