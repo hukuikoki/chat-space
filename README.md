@@ -15,6 +15,7 @@ belongs_to :group
 |:------ |:------|
 |name    |string |
 ### アソシエーション
+has_many :messages
 has_many :user_groups
 has_many :groups, through: :user_groups
 
