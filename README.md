@@ -15,16 +15,16 @@ belongs_to :group
 |:------ |:------|
 |name    |string |
 ### アソシエーション
-has_many :messages
-has_many :belonged_groups, through: :messages source: :group
+has_many :user_groups
+has_many :belonged_groups, through: :user_groups, source: :group
 
 ## groups
 |colum   |type    |
 |:------ |:-------|
 |name    |string  |
 ###アソシエーション
-belongs_to :user
 has_many :messages
+has_many :belonged_users, through: :user_groups, source: :user
 
 ## user_groups
 |colum   |type      |
