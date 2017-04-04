@@ -1,41 +1,48 @@
-$chat-user-group-word-color: #FFFFFF;
+$chat-color: #FFFFFF;
 $member-time-size: 12px;
-$memmber-time-color: #999999;
-$flashp-custom-color: white;
+$member-time-color: #999999;
+$text-border-color: white;
+$water-color: #38aef0;
+$navy-color: #2f3e51;
+$dark-navy-color: #253141;
+$post-message-color: #434A54;
+$dark-gray-color: #434A54;
 
 .chat-group-made-view {
-  background-color: #38aef0;
+  background-color: $water-color;
   height: 30px;
   p {
-    color: white;
+    color: $text-border-color;
     text-align: center;
   }
 }
+
 .chat{
   float: left;
-  height: 100%;
+  height: 100vh;
   width: 100vw;
   &__left {
-    background-color: #2f3e51;
+    background-color: $navy-color;
     height: 100vh;
     width: 300px;
     float: left;
      &--user {
-      padding: 20px;
-       background-color: #253141;
+       @include clearfix();
+       padding: 20px;
+       background-color: $dark-navy-color;
        height: 60px;
        h5 {
         float: left;
         font-size: 16px;
         font-weight: bold;
-        color: $chat-user-group-word-color;
+        color: $chat-color;
         line-height: 70px;
        }
        &--customs {
         float: right;
         padding-top: 22px;
           &--custom {
-            color: white;
+            color: $text-border-color;
           }
        }
      }
@@ -45,19 +52,20 @@ $flashp-custom-color: white;
         padding-bottom: 40px;
         &--name {
           padding-bottom: 5px;
-          color: $chat-user-group-word-color;
+          color: $chat-color;
         }
         &--message {
-          color: $chat-user-group-word-color;
+          color: $chat-color;
         }
       }
     }
   }
   .chat__right {
     float: left;
-    width: calc(100vw - 300px );
+    width: calc(100vw - 300px);
     height: 100vh;
     &__header {
+      @include clearfix();
       padding-left: 40px;
       padding-right: 40px;
       border-bottom: 1px solid #eeeeee;
@@ -71,15 +79,15 @@ $flashp-custom-color: white;
         }
         p {
           font-size: $member-time-size;
-          color: $memmber-time-color;
+          color: $member-time-color;
         }
       }
       &--right {
           float: right;
           margin-top: 28px;
         &--edit {
-          border: 2px solid #38aef0;
-          color: #38aef0;
+          border: 2px solid $water-color;
+          color: $water-color;
           padding-right: 20px;
           padding-left: 20px;
           line-height: 40px;
@@ -99,6 +107,7 @@ $flashp-custom-color: white;
         &__message {
           padding-bottom: 40px;
           &__header {
+            @include clearfix();
             margin-bottom: 10px;
             &--name {
               float: left;
@@ -110,12 +119,12 @@ $flashp-custom-color: white;
             &--then {
                 float: left;
                 font-size: $member-time-size;
-                color: $memmber-time-color;
+                color: $member-time-color;
             }
           }
           &--post {
             font-size: 14px;
-            color: #434A54;
+            color: $post-message-color;
           }
         }
       }
@@ -128,12 +137,15 @@ $flashp-custom-color: white;
         float: left;
         width: calc(100vw - 500px);
         height: 50px;
-        border: 2px solid #fff;
-        background-color: #fff;
+        border: 2px solid $text-border-color;
+        background-color: $text-border-color;
         p {
           float: left;
           height: 50px;
           line-height: 50px;
+          padding-left: 10px;
+          font-size: 16px;
+          color: $dark-gray-color;
         }
         i.fa.fa-image {
           float: right;
@@ -146,19 +158,10 @@ $flashp-custom-color: white;
         text-align: center;
         margin-left: 15px;
         line-height: 50px;
-        color: #fff;
-        border: 0 solid;
-        background-color: #38aef0;
+        color: $text-border-color;
+        background-color: $water-color;
         width: 100px;
       }
     }
   }
 }
-
-.clearfix:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-
