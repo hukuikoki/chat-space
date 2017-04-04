@@ -1,18 +1,17 @@
-$chat-color: #FFFFFF;
+$white-color: #FFFFFF;
 $member-time-size: 12px;
 $member-time-color: #999999;
-$text-border-color: white;
-$water-color: #38aef0;
+$skyblue-color: #38aef0;
 $navy-color: #2f3e51;
 $dark-navy-color: #253141;
 $post-message-color: #434A54;
 $dark-gray-color: #434A54;
 
 .chat-group-made-view {
-  background-color: $water-color;
+  background-color: $skyblue-color;
   height: 30px;
   p {
-    color: $text-border-color;
+    color: $white-color;
     text-align: center;
   }
 }
@@ -35,14 +34,14 @@ $dark-gray-color: #434A54;
         float: left;
         font-size: 16px;
         font-weight: bold;
-        color: $chat-color;
+        color: $white-color;
         line-height: 70px;
        }
        &--customs {
         float: right;
         padding-top: 22px;
           &--custom {
-            color: $text-border-color;
+            color: $white-color;
           }
        }
      }
@@ -52,10 +51,10 @@ $dark-gray-color: #434A54;
         padding-bottom: 40px;
         &--name {
           padding-bottom: 5px;
-          color: $chat-color;
+          color: $white-color;
         }
         &--message {
-          color: $chat-color;
+          color: $white-color;
         }
       }
     }
@@ -86,8 +85,8 @@ $dark-gray-color: #434A54;
           float: right;
           margin-top: 28px;
         &--edit {
-          border: 2px solid $water-color;
-          color: $water-color;
+          border: 2px solid $skyblue-color;
+          color: $skyblue-color;
           padding-right: 20px;
           padding-left: 20px;
           line-height: 40px;
@@ -137,8 +136,8 @@ $dark-gray-color: #434A54;
         float: left;
         width: calc(100vw - 500px);
         height: 50px;
-        border: 2px solid $text-border-color;
-        background-color: $text-border-color;
+        border: 2px solid $white-color;
+        background-color: $white-color;
         p {
           float: left;
           height: 50px;
@@ -158,8 +157,8 @@ $dark-gray-color: #434A54;
         text-align: center;
         margin-left: 15px;
         line-height: 50px;
-        color: $text-border-color;
-        background-color: $water-color;
+        color: $white-color;
+        background-color: $skyblue-color;
         width: 100px;
       }
     }
