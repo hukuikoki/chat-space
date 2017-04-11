@@ -3,11 +3,11 @@
 .chat
   .chat__left
     .chat__left--user
-      %h5 福井洸希
+      %h5= current_user.name
       .chat__left--user--customs
         = link_to '#', class: 'chat__left--user--customs--custom' do
           %i.fa.fa-pencil-square-o
-        = link_to '#', class: 'chat__left--user--customs--custom' do
+        = link_to edit_user_registration_path, class: 'chat__left--user--customs--custom' do
           %i.fa.fa-cog
     %ul.chat__groups
       %li.chat__groups--group
