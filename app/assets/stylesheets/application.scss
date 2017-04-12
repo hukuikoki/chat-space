@@ -1,15 +1,4 @@
-.notice{
-  background-color: #38AEF0;
-  text-align: center;
-  color: #FFFFFF;
-}
-
-.alert {
-  background-color: #ed6d6d;
-  text-align: center;
-  color: #FFFFFF;
-}
-
+@import "./flash";
 @import "./user";
 @import "./variable";
 @import "./clearfix";
