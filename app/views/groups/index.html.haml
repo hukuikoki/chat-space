@@ -27,7 +27,8 @@
         %h2 暇人
         %p.chat__right__header--left--users Members: かつお わかめ
       .chat__right__header--right
-        = link_to 'Edit', '#', class: 'chat__right__header--right--edit'
+        = link_to edit_group_path(@group), class: 'chat__right__header--right--edit' do
+          Edit
     .chat__main
       %ul.chat__main__body
         %li.chat__main__body__message
