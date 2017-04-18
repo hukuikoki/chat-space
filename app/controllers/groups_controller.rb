@@ -1,8 +1,9 @@
 class GroupsController < ApplicationController
 
-  before_action :get_id, only: [:edit, :update]
+  before_action :find_group, only: [:edit, :update]
 
   def index
+    @groups = current_user.groups
   end
 
   def new
@@ -13,8 +14,12 @@ class GroupsController < ApplicationController
   end
 
   def create
-    @group = Group.new(group_params)
-    @group.save
+    group = Group.new(group_params)
+    if group.save
+      redirect_to group_messages_path(group), notice: '新しいグループが作成されました'
+    else
+      redirect_to new_group_path, alert: 'グループ作成に失敗しました。'
+    end
   end
 
   def update
@@ -26,7 +31,7 @@ class GroupsController < ApplicationController
     params.require(:group).permit(:name, user_ids:[])
   end
 
-  def get_id
+  def find_group
      @group = Group.find(params[:id])
   end
 
