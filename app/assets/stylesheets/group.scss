@@ -5,12 +5,13 @@
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 5px;
-  box-sizing: border-box;
-
+   box-sizing: border-box;
   h1 {
     letter-spacing: 2px;
     font-size: 24px;
     text-align: center;
+    font-weight: bold;
+    color: #434a54;
   }
 
   .chat-group-form__errors {
@@ -41,6 +42,7 @@
 
   .chat-group-form__field {
     margin-top: 30px;
+    @include clearfix();
 
     .chat-group-form__field--left {
       float: left;
