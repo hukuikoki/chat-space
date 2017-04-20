@@ -8,6 +8,7 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
+    @group.users << current_user
   end
 
   def edit
@@ -23,7 +24,11 @@ class GroupsController < ApplicationController
   end
 
   def update
-    @group.update(group_params)
+    if @group.update(group_params)
+       redirect_to group_messages_path(@group), notice: "グループ編集に成功しました"
+    else
+      redirect_to link_to edit_group_path(@group), alert: 'グループは編集されませんでした'
+    end
   end
 
   private
