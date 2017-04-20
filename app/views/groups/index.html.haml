@@ -7,16 +7,4 @@
           %i.fa.fa-pencil-square-o
         = link_to edit_user_registration_path, class: 'chat__left--user--customs--custom' do
           %i.fa.fa-cog
-    %ul.chat__groups
-      %li.chat__groups--group
-        = link_to '#', class: 'chat__groups--group--link' do
-          %p.chat__groups--group--name イケイケ
-          %p.chat__groups--group--message 今日暇？
-      %li.chat__groups--group
-        = link_to '#', class: 'chat__groups--group--link' do
-          %p.chat__groups--group--name 読書大好きな人たち
-          %p.chat__groups--group--message まだメッセージはありません。
-      %li.chat__groups--group
-        = link_to '#', class: 'chat__groups--group--link' do
-          %p.chat__groups--group--name 暇人
-          %p.chat__groups--group--message まだメッセージはありません。
+    = render partial: :group, collection: @groups, as: :group

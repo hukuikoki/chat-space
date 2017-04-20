@@ -1,0 +1,7 @@
+%ul.chat__groups
+  %li.chat__groups--group
+    = link_to group_messages_path(group), class: 'chat__groups--group--link' do
+      %p.chat__groups--group--name
+        = group.name
+      %p.chat__groups--group--message
+        まだです。
