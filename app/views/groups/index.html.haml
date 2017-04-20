@@ -3,56 +3,8 @@
     .chat__left--user
       %h5= current_user.name
       .chat__left--user--customs
-        = link_to '#', class: 'chat__left--user--customs--custom' do
+        = link_to new_group_path, class: 'chat__left--user--customs--custom' do
           %i.fa.fa-pencil-square-o
         = link_to edit_user_registration_path, class: 'chat__left--user--customs--custom' do
           %i.fa.fa-cog
-    %ul.chat__groups
-      %li.chat__groups--group
-        = link_to '#', class: 'chat__groups--group--link' do
-          %p.chat__groups--group--name イケイケ
-          %p.chat__groups--group--message 今日暇？
-      %li.chat__groups--group
-        = link_to '#', class: 'chat__groups--group--link' do
-          %p.chat__groups--group--name 読書大好きな人たち
-          %p.chat__groups--group--message まだメッセージはありません。
-      %li.chat__groups--group
-        = link_to '#', class: 'chat__groups--group--link' do
-          %p.chat__groups--group--name 暇人
-          %p.chat__groups--group--message まだメッセージはありません。
-
-  .chat__right
-    .chat__right__header
-      .chat__right__header--left
-        %h2 暇人
-        %p.chat__right__header--left--users Members: かつお わかめ
-      .chat__right__header--right
-        = link_to 'Edit', '#', class: 'chat__right__header--right--edit'
-    .chat__main
-      %ul.chat__main__body
-        %li.chat__main__body__message
-          .chat__main__body__message__header
-            %p.chat__main__body__message__header--name かつお
-            %p.chat__main__body__message__header--then 2017/3/28 19:33:32
-          %p.chat__main__body__message--post 暇や
-        %li.chat__main__body__message
-          .chat__main__body__message__header
-            %p.chat__main__body__message__header--name わかめ
-            %p.chat__main__body__message__header--then 2017/3/28 19:36:34
-          %p.chat__main__body__message--post めしいこや
-        %li.chat__main__body__message
-          .chat__main__body__message__header
-            %p.chat__main__body__message__header--name かつお
-            %p.chat__main__body__message__header--then 2017/3/28 19:40:40
-          %p.chat__main__body__message--post 何食う？
-        %li.chat__main__body__message
-          .chat__main__body__message__header
-            %p.chat__main__body__message__header--name わかめ
-            %p.chat__main__body__message__header--then 2017/3/28 19:45:54
-          %p.chat__main__body__message--post 王将いこ
-    .chat__bottom
-      .chat__bottom__form
-        %p type a message
-        %i.fa.fa-image
-      .chat__bottom--sendbtn
-        %p send
+    = render partial: :group, collection: @groups, as: :group
