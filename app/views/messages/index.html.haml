@@ -21,27 +21,7 @@
         = link_to edit_group_path(@group), class: 'chat__right__header--right--edit' do
           Edit
     .chat__main
-      %ul.chat__main__body
-        %li.chat__main__body__message
-          .chat__main__body__message__header
-            %p.chat__main__body__message__header--name かつお
-            %p.chat__main__body__message__header--then 2017/3/28 19:33:32
-          %p.chat__main__body__message--post 暇や
-        %li.chat__main__body__message
-          .chat__main__body__message__header
-            %p.chat__main__body__message__header--name わかめ
-            %p.chat__main__body__message__header--then 2017/3/28 19:36:34
-          %p.chat__main__body__message--post めしいこや
-        %li.chat__main__body__message
-          .chat__main__body__message__header
-            %p.chat__main__body__message__header--name かつお
-            %p.chat__main__body__message__header--then 2017/3/28 19:40:40
-          %p.chat__main__body__message--post 何食う？
-        %li.chat__main__body__message
-          .chat__main__body__message__header
-            %p.chat__main__body__message__header--name わかめ
-            %p.chat__main__body__message__header--then 2017/3/28 19:45:54
-          %p.chat__main__body__message--post 王将いこ
+      = render partial: :message, collection: @messages, as: :message
     .chat__bottom
       = form_for [@group, @message] do |f|
         = f.text_field :text, placeholder: 'type a message', value: ''
