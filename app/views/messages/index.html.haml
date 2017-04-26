@@ -43,8 +43,7 @@
             %p.chat__main__body__message__header--then 2017/3/28 19:45:54
           %p.chat__main__body__message--post 王将いこ
     .chat__bottom
-      .chat__bottom__form
-        %p type a message
+      = form_for [@group, @message] do |f|
+        = f.text_field :text, placeholder: 'type a message', value: ''
         %i.fa.fa-image
-      .chat__bottom--sendbtn
-        %p send
+        = f.submit 'Send', class: 'sendbtn'
