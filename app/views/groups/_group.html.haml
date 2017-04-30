@@ -4,4 +4,6 @@
       %p.chat__groups--group--name
         = group.name
       %p.chat__groups--group--message
-        まだです。
+        = group.messages.last.try(:text)
+        - if group.messages.last.try(:text).blank?
+          まだメッセージはありません。
