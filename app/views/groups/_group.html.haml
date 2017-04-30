@@ -5,3 +5,5 @@
         = group.name
       %p.chat__groups--group--message
         = group.messages.last.try(:text)
+        - if group.messages.last.try(:text).blank?
+          まだメッセージはありません。
