@@ -12,8 +12,7 @@ class MessagesController < ApplicationController
     if message.save
       redirect_to group_messages_url(message.group_id), notice: 'メッセージが送信されました。'
     else
-      flash.now[:alert] = 'グループは作成されませんでした'
-      render :index
+      redirect_to  group_messages_url(message.group_id), alert: 'メッセージが送信されませんでした。'
     end
   end
 
