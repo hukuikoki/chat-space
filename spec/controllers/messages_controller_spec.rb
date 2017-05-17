@@ -11,7 +11,7 @@ describe MessagesController do
 
   describe 'GET #index' do
     before do
-    get :index, params: { group_id: group.id }
+      get :index, params: { group_id: group.id }
     end
 
     it "assigns the requested group to @group" do
@@ -42,8 +42,7 @@ describe MessagesController do
      context "save valid attributes" do
        let(:params) { post :create, params: { group_id: group.id, message: attributes_for(:message) } }
        it "saves message" do
-         expect{ params
-        }.to change(Message, :count).by(1)
+         expect{ params}.to change(Message, :count).by(1)
        end
        it "redirects to message#index" do
         params
@@ -54,8 +53,7 @@ describe MessagesController do
      context "does not save invalid attributes" do
       let(:params) { post :create, params: { group_id: group.id, message: attributes_for(:message, text: "") } }
       it "does not save message" do
-        expect{ params
-        }.not_to change(Message, :count)
+        expect{ params}.not_to change(Message, :count)
       end
       it "redirects to message#index" do
         params
