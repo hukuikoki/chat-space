@@ -48,6 +48,11 @@ describe MessagesController do
         params
         expect(response).to redirect_to group_messages_path
        end
+
+       it "includes flash-message" do
+        params
+        expect(flash[:notice]).not_to be_empty
+       end
      end
 
      context "does not save invalid attributes" do
@@ -55,9 +60,15 @@ describe MessagesController do
       it "does not save message" do
         expect{ params}.not_to change(Message, :count)
       end
+
       it "redirects to message#index" do
         params
         expect(response).to redirect_to group_messages_path
+      end
+
+      it "includes flash-message" do
+        params
+        expect(flash[:alert]).not_to be_empty
       end
      end
   end
