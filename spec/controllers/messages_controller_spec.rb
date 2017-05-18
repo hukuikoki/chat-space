@@ -51,7 +51,7 @@ describe MessagesController do
 
        it "includes flash-message" do
         params
-        expect(flash[:notice]).not_to be_empty
+        expect(flash[:notice]).to include("メッセージが送信されました。")
        end
      end
 
@@ -68,7 +68,7 @@ describe MessagesController do
 
       it "includes flash-message" do
         params
-        expect(flash[:alert]).not_to be_empty
+        expect(flash[:alert]).to include("メッセージが送信されませんでした。")
       end
      end
   end
