@@ -12,6 +12,7 @@ class MessagesController < ApplicationController
     if @message.save
        respond_to do |format|
          format.json { render json: @message }
+       end
     else
       redirect_to  group_messages_url(message.group_id), alert: 'メッセージが送信されませんでした。'
     end
