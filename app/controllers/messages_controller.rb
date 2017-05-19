@@ -8,9 +8,10 @@ class MessagesController < ApplicationController
   end
 
   def create
-    message = current_user.messages.new(create_params)
-    if message.save
-      redirect_to group_messages_url(message.group_id), notice: 'メッセージが送信されました。'
+    @message = current_user.messages.new(create_params)
+    if @message.save
+       respond_to do |format|
+         format.json { render json: @message }
     else
       redirect_to  group_messages_url(message.group_id), alert: 'メッセージが送信されませんでした。'
     end
