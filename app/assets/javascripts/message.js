@@ -7,7 +7,7 @@ $(function() {
                       <p class="chat__main__body__message__header--then">${ message.created_at }</p>
                     </div> <p class="chat__main__body__message--post"> ${ message.text }</p>
                   </li>
-                </ul>`
+                </ul>`;
     return html;
   }
 
