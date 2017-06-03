@@ -1,11 +1,18 @@
 class UsersController < ApplicationController
 
   def search
-    @users = User.where('title LIKE(?)',"%#{search_params[:keyword]}%").order('title ASC').limit(20)
+    @users = User.where.not(name: current_user.name)
+    @users = @users.where('name LIKE(?)',"%#{search_params[:keyword]}%").order('name ASC')
 
     respond_to do |format|
       format.json { render json: @users }
     end
+  end
+
+  private
+
+  def search_params
+    params.permit(:keyword)
   end
 
 end
