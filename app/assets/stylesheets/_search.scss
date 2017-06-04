@@ -4,9 +4,10 @@
   color: blue;
   left: 580px;
   bottom: 10px;
+  cursor: pointer;
 }
 
-#user-search-result {
+.add-group-user {
   position: relative;
   list-style: none;
   height: 50px;
@@ -34,5 +35,6 @@
   left: 580px;
   bottom: 10px;
   color: red;
+  cursor: pointer;
 }
 
