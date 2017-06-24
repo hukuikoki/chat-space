@@ -14,9 +14,9 @@ CarrierWave.configure do |config|
     case Rails.env
     when 'development'
         config.fog_directory  = 'chat-space-kosahara'
-        config.asset_host = 'https://s3.amazonaws.com/chat-space-kosahara'
+        config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/chat-space-kosahara'
     when 'production'
         config.fog_directory  = 'chat-space-kosahara'
-        config.asset_host = 'https://s3.amazonaws.com/chat-space-kosahara'
+        config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/chat-space-kosahara'
     end
 end
