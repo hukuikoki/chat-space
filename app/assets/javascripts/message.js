@@ -4,9 +4,9 @@ $(document).on('turbolinks:load', function() {
     function buildHTML(message) {
 
     if (message.image) {
-      var image = `<img src= ${ message.image } class="post-image">`
+      var image = `<img src= ${ message.image } class="post-image">`;
     } else {
-      var image = ''
+      var image = '';
     };
 
     var html = `<ul class="chat__main__body">
