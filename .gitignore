@@ -13,3 +13,4 @@
 /tmp
 uploads/
 vendor/bundle
+.env
