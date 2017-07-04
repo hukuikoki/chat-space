@@ -3,7 +3,7 @@ require 'carrierwave/storage/file'
 require 'carrierwave/storage/fog'
 
 CarrierWave.configure do |config|
-  if ENV['ACCESS_KEY_ID'].exist?
+  if ENV['ACCESS_KEY_ID'].present?
     config.storage = :fog
   else
     config.storage = :file
