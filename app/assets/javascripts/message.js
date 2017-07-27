@@ -52,26 +52,27 @@ $(document).on('turbolinks:load', function() {
       //自動更新の関数
       var interval = setInterval(function() {
         if (window.location.href.match(/\/groups\/\d+\/messages/)) {
-      $.ajax({
-        type: 'GET',
-        url: location.href,
-        dataType: 'json'
-      })
-      .done(function(json) {
-        var insertHTML = '';
-        json.messages.forEach(function(message) {
-            insertHTML += buildHTML(message);
-        });
-        var $messages = $('.chat__main');
-        $messages.empty();
-        $messages.append(insertHTML);
-      })
-      .fail(function(json) {
-        alert('自動更新に失敗しました');
-      });
-      } else {
-      clearInterval(interval);
-     }} , 5 * 1000 );
+          $.ajax({
+            type: 'GET',
+            url: location.href,
+            dataType: 'json'
+          })
+          .done(function(json) {
+            var insertHTML = '';
+            json.messages.forEach(function(message) {
+              insertHTML += buildHTML(message);
+            });
+            var $messages = $('.chat__main');
+            $messages.empty();
+            $messages.append(insertHTML);
+          })
+          .fail(function(json) {
+            alert('自動更新に失敗しました');
+          });
+        } else {
+            clearInterval(interval);
+          }
+      } , 5 * 1000 );
   });
 });
 
