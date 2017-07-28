@@ -72,6 +72,6 @@ $(document).on('turbolinks:load', function() {
         } else {
             clearInterval(interval);
           }
-      } , 5 * 1000 );
+      }, 5 * 1000 );
   });
 });
