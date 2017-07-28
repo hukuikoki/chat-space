@@ -75,5 +75,3 @@ $(document).on('turbolinks:load', function() {
       } , 5 * 1000 );
   });
 });
-
-
