@@ -19,7 +19,8 @@ class MessagesController < ApplicationController
           format.json { render 'create', handlers: 'jbuilder' }
         end
       else
-        redirect_to group_messages_url(@message.group_id), alert: 'メッセージが送信されませんでした。'
+        flash.now[:alert] = 'メッセージは送信されませんでした。'
+        render :index
       end
   end
 
