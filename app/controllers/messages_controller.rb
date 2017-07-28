@@ -15,7 +15,7 @@ class MessagesController < ApplicationController
     @message = current_user.messages.new(create_params)
       if @message.save
         respond_to do |format|
-          format.html { group_messages_url(@message.group_id) }
+          format.html { group_messages_url(@message) }
           format.json { render 'create', handlers: 'jbuilder' }
         end
       else
