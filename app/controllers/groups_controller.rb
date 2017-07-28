@@ -25,9 +25,9 @@ class GroupsController < ApplicationController
 
   def update
     if @group.update(group_params)
-       redirect_to group_messages_path(@group), notice: "グループ編集に成功しました"
+       redirect_to group_messages_url(@group), notice: 'グループ編集に成功しました'
     else
-      redirect_to edit_group_path(@group), alert: 'グループは編集されませんでした'
+      redirect_to edit_group_url(@group), alert: 'グループは編集されませんでした'
     end
   end
 
