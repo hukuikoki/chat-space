@@ -19,7 +19,7 @@ class MessagesController < ApplicationController
           format.json { render 'create', handlers: 'jbuilder' }
         end
       else
-        redirect_to  group_messages_url(@message.group_id), alert: 'メッセージが送信されませんでした。'
+        redirect_to group_messages_url(@message.group_id), alert: 'メッセージが送信されませんでした。'
       end
   end
 
@@ -30,4 +30,3 @@ class MessagesController < ApplicationController
   end
 
 end
-
