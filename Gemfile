@@ -56,6 +56,10 @@ group :test do
   gem "rails-controller-testing"
 end
 
+group :production do
+  gem 'unicorn'
+end
+
 gem 'haml-rails'
 gem 'font-awesome-sass'
 gem 'font-awesome-rails'
