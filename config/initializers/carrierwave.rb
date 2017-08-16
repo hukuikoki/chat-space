@@ -3,11 +3,11 @@ require 'carrierwave/storage/file'
 require 'carrierwave/storage/fog'
 
 CarrierWave.configure do |config|
-  # if ENV['ACCESS_KEY_ID'].present?
-  #   config.storage = :fog
-  # else
-  #   config.storage = :file
-  # end
+  if ENV['ACCESS_KEY_ID'].present?
+    config.storage = :fog
+  else
+    config.storage = :file
+  end
   config.fog_credentials = {
     provider: 'AWS',
     aws_access_key_id: ENV['ACCESS_KEY_ID'],
